@@ -10,4 +10,6 @@ public interface IUserService {
 
 	List<UserResponseDto> getAllUser();
 
+	UserResponseDto getCurrentUser();
+
 }

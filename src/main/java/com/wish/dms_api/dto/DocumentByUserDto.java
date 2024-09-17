@@ -1,8 +1,5 @@
 package com.wish.dms_api.dto;
 
-import java.util.List;
-
-import com.wish.dms_api.entity.Document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

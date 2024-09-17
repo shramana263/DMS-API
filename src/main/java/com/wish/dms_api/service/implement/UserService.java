@@ -5,17 +5,19 @@ import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.wish.dms_api.dto.UserResponseDto;
 import com.wish.dms_api.entity.User;
 import com.wish.dms_api.repository.IUserRepository;
+import com.wish.dms_api.security.UserSingleton;
 import com.wish.dms_api.service.IUserService;
 @Service
 public class UserService implements IUserService{
 
 	@Autowired IUserRepository userRepository;
-	@Autowired ModelMapper modelMapper;
+	@Autowired ModelMapper mapper;
 	
 	@Override
 	public boolean emailExists(String email) {
@@ -26,11 +28,37 @@ public class UserService implements IUserService{
 
 	@Override
 	public List<UserResponseDto> getAllUser() {
-		List<User> users= userRepository.findAll();
-		for(User user: users) {
-			modelMapper.map(users, UserResponseDto.class);
-		}
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	// @Override
+	// public UserResponseDto getCurrentUser() {
+	// 	// TODO Auto-generated method stub
+	// 	throw new UnsupportedOperationException("Unimplemented method 'getCurrentUser'");
+	// }
+
+	@Override
+	public UserResponseDto getCurrentUser() {
+		UserSingleton customUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(customUserDetails.getId()).orElseThrow();
+		System.out.println(user);
+		UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
+		return userResponseDto;
+	}
+
+//	@Override
+//	public List<UserResponseDto> getAllUser() {
+//		List<User> users= userRepository.findAll();
+////		List<UserResponseDto> userdtos= users.stream().map(user->{
+////			UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
+////			return useeResponseDto;
+////		}).collect(Collectors.toList());
+//		List<UserResponseDto> dtos= users.stream().map(user->{
+//			
+//		})
+//		
+//		return userdtos;
+//	}
 
 }
