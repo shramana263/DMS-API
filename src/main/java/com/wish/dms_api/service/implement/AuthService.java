@@ -47,24 +47,29 @@ public class AuthService implements IAuthService{
 	@Override
 	public LoginResponseDto checkLogin(LoginDto loginDto) {
 
-
-		Authentication authentication= authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword())
-				);
-		
-		if(authentication.isAuthenticated()) {
-			String token= jwtService.generateToken(loginDto.getUsername());
-		
+		try {
 			
+			Authentication authentication= authenticationManager.authenticate(
+					new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword())
+					);
+			
+			if(authentication.isAuthenticated()) {
+				String token= jwtService.generateToken(loginDto.getUsername());
+				
+				
 //			LoginResponseDto loginResponseDto;
-			loginResponseDto.setToken(token);
-			User user= userRepository.findByUsername(loginDto.getUsername());
-			loginResponseDto.setData(mapper.map(user,UserResponseDto.class));
+				loginResponseDto.setToken(token);
+				User user= userRepository.findByUsername(loginDto.getUsername());
+				loginResponseDto.setData(mapper.map(user,UserResponseDto.class));
+				
+				return loginResponseDto;
+			}
 			
-			return loginResponseDto;
+			throw new UsernameNotFoundException("Username not found");
+		} catch(Exception ex){
+			throw new NullPointerException();
 		}
-		
-		throw new UsernameNotFoundException("Username not found");
+
 	}
 
 }

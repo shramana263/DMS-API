@@ -23,13 +23,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/auth")
 @Tag(name = "Auth" , description = "Auth API")
 public class AuthController {
 
-	
 	@Autowired
 	private IAuthService authService;
 	
@@ -49,12 +48,17 @@ public class AuthController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<LoginResponseDto> register(@RequestBody LoginDto loginDto){
+	public ResponseEntity<?> register(@Valid @RequestBody LoginDto loginDto){
 		
 //		System.out.println(loginDto);
 		LoginResponseDto loginResponseDto= authService.checkLogin(loginDto);
 
-		return new ResponseEntity<>(loginResponseDto, HttpStatus.OK);
+//		return new ResponseEntity<>(loginResponseDto, HttpStatus.OK);
+		return ResponseHandler.response(
+				ResponseHandler.SUCCESS_CODE,
+				loginResponseDto,
+				ResponseHandler.SUCCESS_MESSAGE
+				);
 	}
 }
 

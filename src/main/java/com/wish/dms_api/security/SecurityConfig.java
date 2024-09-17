@@ -2,6 +2,7 @@ package com.wish.dms_api.security;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.HandlerExceptionResolver;
  
 @Configuration
 @EnableWebSecurity
@@ -24,22 +26,27 @@ public class SecurityConfig {
 
 	@Autowired
 	AuthUserDetailsService authUserDetailsService;
-	
-	@Autowired JwtFilter jwtFilter;
+	@Autowired
+	@Qualifier("handlerExceptionResolver")
+	private HandlerExceptionResolver exceptionResolver;
+	@Bean
+	public JwtFilter jwtFilter() {
+		return new JwtFilter(exceptionResolver);
+	}
 	
 	private static final String[] WHITE_LIST_URL = { "/api/v1/auth/**", "/v2/api-docs", "/v3/api-docs",
             "/v3/api-docs/**", "/swagger-resources", "/swagger-resources/**", "/configuration/ui",
             "/configuration/security", "/swagger-ui/**", "/webjars/**",
         "/webjars/swagger-ui/**",
         "/swagger-ui.html", "/api/auth/**",
-            "/api/test/**"  };
+            "/api/test/**" };
 	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
 		
 		httpSecurity
-				.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+				.addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class)
 				.authorizeHttpRequests(request->request
 				.requestMatchers(WHITE_LIST_URL).permitAll()
 				.anyRequest().authenticated())

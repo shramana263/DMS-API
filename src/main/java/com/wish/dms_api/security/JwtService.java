@@ -1,18 +1,13 @@
 package com.wish.dms_api.security;
-
-
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 import java.util.Date;
 import java.util.function.Function;
 
-import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 //import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -21,27 +16,29 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-	private String secretKey="";
+	private String secretKey="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	 //   SecretKey key = Jwts.SIG.HS256.key().build();
 //	SecretKey key= Jwts.SIG.HS256.key().build();
 	
-	public JwtService() {
-        try {
-            KeyGenerator keyGenerator=KeyGenerator.getInstance("HmacSHA256");
-            SecretKey sk = keyGenerator.generateKey();
-
-            secretKey= Base64.getEncoder().encodeToString(sk.getEncoded());
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//	public JwtService() {
+//        try {
+//            KeyGenerator keyGenerator=KeyGenerator.getInstance("HmacSHA256");
+//            SecretKey sk = keyGenerator.generateKey();
+//
+//            secretKey= Base64.getEncoder().encodeToString(sk.getEncoded());
+//        } catch (NoSuchAlgorithmException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
     private SecretKey getKey() {
+//    	System.out.println("getKey");
         byte[] keyBytes= Decoders.BASE64.decode(secretKey);
+//        System.out.println(Keys.hmacShaKeyFor(keyBytes));
         return Keys.hmacShaKeyFor(keyBytes);
 
     }
 
-	public String extractUsername(String token) {
+	public String extractUsername(String token){
 		// TODO Auto-generated method stub
 		return extractClaim(token, Claims::getSubject);
 	}
@@ -55,6 +52,7 @@ public class JwtService {
 		// TODO Auto-generated method stub
 //		return extractClaim(token, Claims.getSubject);
 //		return Jwts.parser().verifyWith(key).parse(token).getBody();
+		
 		return Jwts.parser()
 		.verifyWith(getKey())
 		.build()
@@ -62,7 +60,7 @@ public class JwtService {
 		.getPayload();
 	}
 
-	public boolean validateToken(String token, UserDetails userDetails) {
+	public boolean validateToken(String token, UserDetails userDetails){
 		
 		final String username= extractUsername(token);
 		
@@ -71,10 +69,13 @@ public class JwtService {
 	}
 	
 	private boolean isTokenExpired(String token) {
+//		if(!extractExp(token).before(new Date())){
+//			throw new ExpiredJwtException(null, null, "JWT expired");
+//		}
 		return extractExp(token).before(new Date());
 	}
 
-	private Date extractExp(String token) {
+	private Date extractExp(String token)  {
 		return extractClaim(token,Claims::getExpiration);
 	}
 
@@ -87,7 +88,7 @@ public class JwtService {
 		return Jwts.builder()
 				.subject(username)
 				.issuedAt(new Date(System.currentTimeMillis()))
-				.expiration(new Date(System.currentTimeMillis()+1000*60*60*2))
+				.expiration(new Date(System.currentTimeMillis()+1000*30))
 				.signWith(getKey())
 				.compact();
 	}

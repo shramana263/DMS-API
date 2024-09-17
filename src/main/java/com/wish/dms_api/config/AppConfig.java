@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.wish.dms_api.security.CorsFilter;
+//import com.wish.dms_api.security.CorsFilter;
 @Configuration
 public class AppConfig {
 
@@ -13,9 +13,9 @@ public class AppConfig {
 		return new ModelMapper();
 	}
 	
-	@Bean
-    public CorsFilter corsFilter() {
-        return new CorsFilter(); 
-
-    }
+//	@Bean
+//    public CorsFilter corsFilter() {
+//        return new CorsFilter(); 
+//
+//    }
 }
