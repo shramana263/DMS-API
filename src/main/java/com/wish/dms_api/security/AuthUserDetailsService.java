@@ -26,7 +26,7 @@ public class AuthUserDetailsService implements UserDetailsService{
 			throw new UsernameNotFoundException("User not found");
 		}
 //		return null;
-		return new UserSingleton(user);
+		return user;
 	}
 
 }

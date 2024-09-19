@@ -1,7 +1,11 @@
 package com.wish.dms_api.entity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import com.wish.dms_api.validator.EmailExist;
 
@@ -25,7 +29,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="users")
-public class User {
+public class User implements UserDetails{
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -50,6 +54,12 @@ public class User {
 	
 	@OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Document> documents;
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

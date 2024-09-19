@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wish.dms_api.dto.LoginDto;
 import com.wish.dms_api.dto.LoginResponseDto;
+import com.wish.dms_api.dto.RefreshTokenDto;
 import com.wish.dms_api.dto.RegisterDto;
 import com.wish.dms_api.dto.UserResponseDto;
 import com.wish.dms_api.response.ResponseHandler;
@@ -59,6 +60,12 @@ public class AuthController {
 				loginResponseDto,
 				ResponseHandler.SUCCESS_MESSAGE
 				);
+	}
+	
+	@PostMapping("/refresh")
+	public ResponseEntity<?> refresh(@RequestBody @Valid RefreshTokenDto refreshTokenDto){
+		LoginResponseDto loginResponseDto= authService.refreshToken(refreshTokenDto);
+		return new ResponseEntity<>(loginResponseDto, HttpStatus.OK);
 	}
 }
 

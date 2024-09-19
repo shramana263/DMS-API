@@ -1,7 +1,5 @@
 package com.wish.dms_api.dto;
 
-import org.springframework.stereotype.Component;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
-public class LoginResponseDto {
+public class RefreshTokenDto {
 
-	private UserResponseDto data;
-	private String token;
+	
 	private String refreshToken;
 }

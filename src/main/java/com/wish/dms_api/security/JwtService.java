@@ -1,5 +1,6 @@
 package com.wish.dms_api.security;
 import java.util.Date;
+import java.util.Map;
 import java.util.function.Function;
 
 import javax.crypto.SecretKey;
@@ -88,7 +89,17 @@ public class JwtService {
 		return Jwts.builder()
 				.subject(username)
 				.issuedAt(new Date(System.currentTimeMillis()))
-				.expiration(new Date(System.currentTimeMillis()+1000*60*60))
+				.expiration(new Date(System.currentTimeMillis()+1000*30))
+				.signWith(getKey())
+				.compact();
+	}
+	
+	public String generateRefreshToken(String username) {
+		return Jwts.builder()
+//				.claims(extractClaims)
+				.subject(username)
+				.issuedAt(new Date(System.currentTimeMillis()))
+				.expiration(new Date(System.currentTimeMillis()+1000*45))
 				.signWith(getKey())
 				.compact();
 	}
