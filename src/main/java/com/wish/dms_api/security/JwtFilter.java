@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import com.wish.dms_api.service.IUserService;
+
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -28,6 +30,8 @@ public class JwtFilter extends OncePerRequestFilter{
 	public JwtFilter(HandlerExceptionResolver exceptionResolver) {
 		this.exceptionResolver=exceptionResolver;
 	}
+	
+	@Autowired IUserService userService;
 
 	
 	@Override
@@ -49,7 +53,10 @@ public class JwtFilter extends OncePerRequestFilter{
 				
 			}
 			if(username!=null && SecurityContextHolder.getContext().getAuthentication()==null) {
-				UserDetails userDetails = context.getBean(AuthUserDetailsService.class).loadUserByUsername(username);
+//				UserDetails userDetails = context.getBean(AuthUserDetailsService.class).loadUserByUsername(username);
+				
+				 UserDetails userDetails = userService.userDetailsService().loadUserByUsername(username);
+				
 				System.out.println("before validate");
 				if(jwtService.validateToken(token,userDetails)) {
 					

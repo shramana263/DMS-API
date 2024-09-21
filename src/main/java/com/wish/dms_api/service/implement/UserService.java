@@ -6,6 +6,9 @@ import java.util.Optional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.wish.dms_api.dto.UserResponseDto;
@@ -42,9 +45,33 @@ public class UserService implements IUserService{
 	public UserResponseDto getCurrentUser() {
 		UserSingleton customUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		User user= userRepository.findById(customUserDetails.getId()).orElseThrow();
-		System.out.println(user);
+		System.out.println("Current User" + user);
 		UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
 		return userResponseDto;
+	}
+
+	@Override
+	public UserDetailsService userDetailsService() {
+		// TODO Auto-generated method stub
+		return new UserDetailsService() {
+			
+			@Override
+			public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+//				Optional<User> user= userRepository.findByUsername(username);
+//				
+//				if(user==null) {
+//					System.out.println("user not found");
+//					throw new UsernameNotFoundException("User not found");
+//				}
+//				return user;
+				
+				return userRepository
+						.findByUsername(username)
+						.orElseThrow(()->new UsernameNotFoundException("User not found"));
+			}
+		};
+
 	}
 
 //	@Override

@@ -18,13 +18,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
+
+import com.wish.dms_api.service.IUserService;
  
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-	@Autowired
-	AuthUserDetailsService authUserDetailsService;
+	@Autowired IUserService userService;
+
 	@Autowired
 	@Qualifier("handlerExceptionResolver")
 	private HandlerExceptionResolver exceptionResolver;
@@ -36,9 +38,11 @@ public class SecurityConfig {
 	private static final String[] WHITE_LIST_URL = { "/api/v1/auth/**", "/v2/api-docs", "/v3/api-docs",
             "/v3/api-docs/**", "/swagger-resources", "/swagger-resources/**", "/configuration/ui",
             "/configuration/security", "/swagger-ui/**", "/webjars/**",
-        "/webjars/swagger-ui/**",
-        "/swagger-ui.html", "/api/auth/**",
-            "/api/test/**" };
+            "/webjars/swagger-ui/**",
+            "/swagger-ui.html",
+            "/api/auth/**",
+            "/api/test/**",
+            };
 	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -51,6 +55,7 @@ public class SecurityConfig {
 				.anyRequest().authenticated())
 		.httpBasic(Customizer.withDefaults())
 		.formLogin(Customizer.withDefaults())
+		.cors(Customizer.withDefaults())
 		.csrf(AbstractHttpConfigurer::disable)
 		//single call session, each session will contain an IOC container at each call and delete after working after giving response
 		.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -68,7 +73,7 @@ public class SecurityConfig {
     AuthenticationProvider authenticationProvider() {
     	DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
     	provider.setPasswordEncoder(bcryptpasswordEncoder());
-    	provider.setUserDetailsService(authUserDetailsService);
+    	provider.setUserDetailsService(userService.userDetailsService());
     	
     	return provider;
     }

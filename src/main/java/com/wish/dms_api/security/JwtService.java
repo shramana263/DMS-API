@@ -89,7 +89,7 @@ public class JwtService {
 		return Jwts.builder()
 				.subject(username)
 				.issuedAt(new Date(System.currentTimeMillis()))
-				.expiration(new Date(System.currentTimeMillis()+1000*30))
+				.expiration(new Date(System.currentTimeMillis()+1000*60*60*24))
 				.signWith(getKey())
 				.compact();
 	}
@@ -99,7 +99,7 @@ public class JwtService {
 //				.claims(extractClaims)
 				.subject(username)
 				.issuedAt(new Date(System.currentTimeMillis()))
-				.expiration(new Date(System.currentTimeMillis()+1000*45))
+				.expiration(new Date(System.currentTimeMillis()+1000*60*60*24*2))
 				.signWith(getKey())
 				.compact();
 	}

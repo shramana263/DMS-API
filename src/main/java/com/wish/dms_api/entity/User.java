@@ -3,6 +3,7 @@ package com.wish.dms_api.entity;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,7 +30,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="users")
-public class User implements UserDetails{
+public class User extends Auditable<String> implements UserDetails{
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -52,6 +53,12 @@ public class User implements UserDetails{
 	@Column
 	private String password;
 	
+	@Column
+	private boolean accountVerified;
+	
+	@Column
+	private boolean loginDisabled;
+	
 	@OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Document> documents;
 
@@ -60,6 +67,9 @@ public class User implements UserDetails{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@OneToMany(mappedBy="user")
+	Set<SecureToken> tokens;
 	
 	
 }

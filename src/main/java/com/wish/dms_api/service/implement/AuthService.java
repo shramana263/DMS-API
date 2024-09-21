@@ -67,7 +67,7 @@ public class AuthService implements IAuthService{
 //			LoginResponseDto loginResponseDto;
 				loginResponseDto.setToken(token);
 				loginResponseDto.setRefreshToken(refreshToken);
-				User user= userRepository.findByUsername(loginDto.getUsername());
+				User user= userRepository.findByUsername(loginDto.getUsername()).orElseThrow(()->new UsernameNotFoundException("User not found"));
 				loginResponseDto.setData(mapper.map(user,UserResponseDto.class));
 				
 				return loginResponseDto;
@@ -85,7 +85,7 @@ public class AuthService implements IAuthService{
 
 
 		String username= jwtService.extractUsername(refreshTokenDto.getRefreshToken());
-		User user= userRepository.findByUsername(username);
+		User user= userRepository.findByUsername(username).orElseThrow(()->new UsernameNotFoundException("User not found"));;
 		if(jwtService.validateToken(refreshTokenDto.getRefreshToken(), user)) {
 			
 			String token= jwtService.generateToken(username);
