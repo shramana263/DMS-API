@@ -33,7 +33,6 @@ import com.wish.dms_api.repository.IDocumentRepository;
 import com.wish.dms_api.repository.IDocumentTypeRepository;
 //import com.wish.dms_api.repository.IDocumentTypeRepository;
 import com.wish.dms_api.repository.IUserRepository;
-import com.wish.dms_api.security.UserSingleton;
 import com.wish.dms_api.service.IDocumentService;
 
 @Service
@@ -80,9 +79,9 @@ public class DocumentService implements IDocumentService{
 //		System.out.println(documentTypeRepository.findByName(getDocType(getFileExtension(file.getOriginalFilename()))));
 //		System.out.println(document.getDocType());
 //		getDocType(getFileExtension(file.getOriginalFilename()));
-		UserSingleton customUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		 
-		User user= userRepository.findById(customUserDetails.getId()).orElseThrow();
+//		UserSingleton customUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
 		document.setUser(user);		
 			
 		
@@ -233,8 +232,9 @@ public class DocumentService implements IDocumentService{
 	public List<DocumentResponseDto> getDocumentByTag(String tag) {
 		System.out.println("hello by tag");
 //		
-		UserSingleton userSingleton = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User user= userRepository.findById(userSingleton.getId()).orElseThrow();
+//		UserSingleton userSingleton = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
 		
 		List<Document> documents=documentRepository.findByTags(tag, user);
 		List<DocumentResponseDto> documentDtos= new ArrayList<>();
@@ -287,8 +287,9 @@ public class DocumentService implements IDocumentService{
 		System.out.println("service"+ date);
 //		List<Document> documents= documentRepository.findByCreatedat(date);
 		
-		UserSingleton userSingleton = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User user= userRepository.findById(userSingleton.getId()).orElseThrow();
+//		UserSingleton userSingleton = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
 		
 		List<Document> documents= documentRepository.findByCreatedat(date, user);
 		

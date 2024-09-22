@@ -52,12 +52,12 @@ public class User extends Auditable<String> implements UserDetails{
 	@NotEmpty(message="Give a password")
 	@Column
 	private String password;
-	
-	@Column
-	private boolean accountVerified;
-	
-	@Column
-	private boolean loginDisabled;
+//	
+//	@Column
+//	private boolean accountVerified;
+//	
+//	@Column
+//	private boolean loginDisabled;
 	
 	@OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Document> documents;
@@ -68,8 +68,8 @@ public class User extends Auditable<String> implements UserDetails{
 		return null;
 	}
 	
-	@OneToMany(mappedBy="user")
-	Set<SecureToken> tokens;
+//	@OneToMany(mappedBy="user")
+//	Set<SecureToken> tokens;
 	
 	
 }

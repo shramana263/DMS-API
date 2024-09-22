@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import com.wish.dms_api.dto.UserResponseDto;
 import com.wish.dms_api.entity.User;
 import com.wish.dms_api.repository.IUserRepository;
-import com.wish.dms_api.security.UserSingleton;
 import com.wish.dms_api.service.IUserService;
 @Service
 public class UserService implements IUserService{
@@ -43,8 +42,9 @@ public class UserService implements IUserService{
 
 	@Override
 	public UserResponseDto getCurrentUser() {
-		UserSingleton customUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User user= userRepository.findById(customUserDetails.getId()).orElseThrow();
+//		UserSingleton currentUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
 		System.out.println("Current User" + user);
 		UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
 		return userResponseDto;
