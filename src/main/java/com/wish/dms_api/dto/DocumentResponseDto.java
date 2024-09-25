@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
 
 public class DocumentResponseDto {
 
+	
 	private long id;
 	private String file_name;
 	private String original_name;
@@ -31,4 +32,21 @@ public class DocumentResponseDto {
 //	private DocumentType documentType;
 	private String document_type;
 	
+	private String url;
+
+    // Method to construct the proxy URL
+	
+	
+	
+    public void setUrl(String baseUrl) {
+//            if(storageLocation == StorageLocation.LOCAL) {
+//                    this.url = baseUrl + "/documents/" + fileName;
+//            } else if (storageLocation == StorageLocation.CLOUD) {
+//                    this.url = slug;
+//            }else if (storageLocation == StorageLocation.SERVER) {
+//                    this.url = slug;
+//            }
+    	this.url = baseUrl + "/documents/" + file_name;
+
+    }
 }

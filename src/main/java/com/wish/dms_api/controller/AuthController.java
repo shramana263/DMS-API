@@ -24,7 +24,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/api/auth")
 @Tag(name = "Auth" , description = "Auth API")

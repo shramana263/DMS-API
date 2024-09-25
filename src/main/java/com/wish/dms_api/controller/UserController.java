@@ -15,7 +15,6 @@ import com.wish.dms_api.service.IUserService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
 public class UserController {
 
 	@Autowired 

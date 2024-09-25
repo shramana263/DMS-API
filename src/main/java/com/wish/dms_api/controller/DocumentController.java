@@ -37,7 +37,7 @@ import com.wish.dms_api.service.IDocumentService;
 
 @RestController
 @RequestMapping("/api/doc")
-@CrossOrigin(origins = "*")
+
 public class DocumentController {
 	
 	@Autowired IDocumentService documentService;

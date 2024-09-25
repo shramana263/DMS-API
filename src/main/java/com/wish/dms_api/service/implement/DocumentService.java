@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -47,7 +48,14 @@ public class DocumentService implements IDocumentService{
 	@Autowired IDocumentTypeRepository documentTypeRepository;
 	
 //	@Autowired DocConverter docConverter;
-    private final String uploadDir = "src/main/resources/static/documents/";
+    private final String uploadDir = "D:/springboot/dms-api/src/main/resources/static/documents/";
+    
+    @Value("${document.path}")
+    private String DOCUMENT_PATH;
+
+
+    @Value("${app.base-url}") // Assuming you have a base URL configured
+    private String baseUrl;
 
 	@Override
 	public DocumentResponseDto uploadDocument(DocumentRequestDto documentRequestDto) {
@@ -59,11 +67,11 @@ public class DocumentService implements IDocumentService{
 			return null;
 		}
 		try {
+			String time= String.valueOf(System.currentTimeMillis());
 		Files.createDirectories(Paths.get(uploadDir));
-		Path filePath= Paths.get(uploadDir+file.getOriginalFilename());
+		Path filePath= Paths.get(uploadDir+time+file.getOriginalFilename());
 		Files.write(filePath, file.getBytes());
 		
-		String time= String.valueOf(System.currentTimeMillis());
 		Document document= new Document();
 		document.setOriginal_name(file.getOriginalFilename());
 		document.setPath(filePath.toString());
@@ -99,6 +107,7 @@ public class DocumentService implements IDocumentService{
 		DocumentResponseDto documentResponseDto= mapper.map(document, DocumentResponseDto.class);
 		documentResponseDto.setUser_id(document.getUser().getId());
 		documentResponseDto.setDocument_type(document.getDocumentType().getName());
+		documentResponseDto.setUrl(baseUrl);
 		return documentResponseDto;
 		}catch(Exception ex) {
 			ex.printStackTrace();
@@ -225,6 +234,7 @@ public class DocumentService implements IDocumentService{
             documentDTO.setOriginal_name(document.getOriginal_name());
             documentDTO.setPath(document.getPath());
             documentDTO.setUser_id(document.getUser().getId());
+            documentDTO.setUrl(baseUrl);
 //            documentDTO.setType(document.getDocType());
             documentDTOs.add(documentDTO);
         }
