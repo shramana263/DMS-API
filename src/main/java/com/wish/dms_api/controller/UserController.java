@@ -34,7 +34,7 @@ public class UserController {
 	@GetMapping("/user")
 	public ResponseEntity<Object> fetchUser(){
 		UserResponseDto user= userService.getCurrentUser();
-		System.out.println(user);
+		System.out.println("hello,"+ user);
 		return ResponseHandler.response(
 				ResponseHandler.SUCCESS_CODE,
 				user,

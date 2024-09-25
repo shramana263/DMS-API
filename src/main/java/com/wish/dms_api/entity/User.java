@@ -18,6 +18,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -59,6 +60,7 @@ public class User extends Auditable<String> implements UserDetails{
 //	@Column
 //	private boolean loginDisabled;
 	
+	@Transient
 	@OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Document> documents;
 

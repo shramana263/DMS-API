@@ -13,6 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,6 +37,7 @@ import com.wish.dms_api.service.IDocumentService;
 
 @RestController
 @RequestMapping("/api/doc")
+@CrossOrigin(origins = "*")
 public class DocumentController {
 	
 	@Autowired IDocumentService documentService;
@@ -78,10 +80,10 @@ public class DocumentController {
     
     //get documents against a specific user
     @GetMapping("/getbyuser/{id}")
-    public ResponseEntity<List<DocumentByUserDto>> getDocByUserId(@PathVariable Long id){
-    	
+    public ResponseEntity<List<DocumentResponseDto>> getDocByUserId(@PathVariable Long id){
+    	System.out.println("get all documents of user");
     	try {
-    		List<DocumentByUserDto> docs= documentService.getDocByUser(id);
+    		List<DocumentResponseDto> docs= documentService.getDocByUser(id);
     		return new ResponseEntity<>(docs,HttpStatus.ACCEPTED);
     	}catch(Exception ex) {
     		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

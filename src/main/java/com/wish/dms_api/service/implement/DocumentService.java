@@ -212,14 +212,19 @@ public class DocumentService implements IDocumentService{
 
 
 	@Override
-	 public List<DocumentByUserDto> getDocByUser(Long userId) {
+	 public List<DocumentResponseDto> getDocByUser(Long userId) {
         List<Document> documents = documentRepository.findByUserId(userId);
-        List<DocumentByUserDto> documentDTOs = new ArrayList<>();
+        List<DocumentResponseDto> documentDTOs = new ArrayList<>();
         for (Document document : documents) {
-        	DocumentByUserDto documentDTO = new DocumentByUserDto();
+        	DocumentResponseDto documentDTO = new DocumentResponseDto();
             documentDTO.setId(document.getId());
-            documentDTO.setName(document.getFile_name());
-            documentDTO.setFilePath(document.getPath());
+            documentDTO.setFile_name(document.getFile_name());
+            documentDTO.setDocument_type(document.getDocumentType().getName());
+            documentDTO.setExtension(document.getExtension());
+            documentDTO.setMime_type(document.getMime_type());
+            documentDTO.setOriginal_name(document.getOriginal_name());
+            documentDTO.setPath(document.getPath());
+            documentDTO.setUser_id(document.getUser().getId());
 //            documentDTO.setType(document.getDocType());
             documentDTOs.add(documentDTO);
         }

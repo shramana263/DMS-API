@@ -1,6 +1,7 @@
 package com.wish.dms_api.service.implement;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
@@ -10,16 +11,22 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.wish.dms_api.dto.UserResponseDto;
 import com.wish.dms_api.entity.User;
 import com.wish.dms_api.repository.IUserRepository;
+import com.wish.dms_api.security.JwtService;
 import com.wish.dms_api.service.IUserService;
+
+import jakarta.servlet.http.HttpServletRequest;
 @Service
 public class UserService implements IUserService{
 
 	@Autowired IUserRepository userRepository;
 	@Autowired ModelMapper mapper;
+	@Autowired JwtService jwtService;
 	
 	@Override
 	public boolean emailExists(String email) {
@@ -42,12 +49,39 @@ public class UserService implements IUserService{
 
 	@Override
 	public UserResponseDto getCurrentUser() {
+		System.out.println("hello currentuser");
 //		UserSingleton currentUserDetails = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
-		System.out.println("Current User" + user);
-		UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
-		return userResponseDto;
+		try {
+			System.out.println(SecurityContextHolder.getContext());
+			User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			System.out.println(currentUserDetails);
+			User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
+			System.out.println("Current User" + user);
+			UserResponseDto userResponseDto= mapper.map(user, UserResponseDto.class);
+			return userResponseDto;
+		}
+		catch(Exception ex) {
+			System.out.println(ex);
+			return null;
+		}
+		
+		
+		// Another way to get current user
+		
+//		HttpServletRequest request = ((ServletRequestAttributes) Objects
+//                .requireNonNull(RequestContextHolder.getRequestAttributes()))
+//                .getRequest();
+//        String token = request.getHeader("Authorization");
+//
+//        if (token != null && token.startsWith("Bearer ")) {
+//            token = token.substring(7); // Remove "Bearer " from the token
+//        }
+//
+//        String username = jwtService.extractUsername(token);
+//        var user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+//
+//        return mapper.map(user, UserResponseDto.class);
+		
 	}
 
 	@Override

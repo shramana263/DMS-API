@@ -3,6 +3,7 @@ package com.wish.dms_api.dto;
 import java.util.Date;
 import java.util.List;
 
+import com.wish.dms_api.entity.Document;
 import com.wish.dms_api.entity.DocumentTag;
 import com.wish.dms_api.entity.DocumentType;
 //import com.wish.dms_api.entity.DocumentType;

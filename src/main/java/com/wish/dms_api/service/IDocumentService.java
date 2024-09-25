@@ -30,7 +30,7 @@ public interface IDocumentService {
 	
 	DocumentResponseDto updateDocument(DocumentUpdateDto documentUpdateDto, Long id );
 	
-	List<DocumentByUserDto> getDocByUser(Long userId);
+	List<DocumentResponseDto> getDocByUser(Long userId);
 	
 	List<DocumentResponseDto> getDocumentByTag(String tag);
 	
