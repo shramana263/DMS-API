@@ -1,5 +1,7 @@
 package com.wish.dms_api.security;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -16,6 +18,7 @@ import io.jsonwebtoken.security.Keys;
 
 @Service
 public class JwtService {
+	private final List<String> revokedTokens = new ArrayList<>(); // For blacklist approach
 
 	private String secretKey="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	 //   SecretKey key = Jwts.SIG.HS256.key().build();
@@ -104,4 +107,14 @@ public class JwtService {
 				.compact();
 	}
 	
+	
+	
+
+    public void invalidateToken(String token) {
+        revokedTokens.add(token);
+    }
+
+    public boolean isTokenRevoked(String token) {
+        return revokedTokens.contains(token);
+    }
 }

@@ -17,12 +17,13 @@ import com.wish.dms_api.dto.RefreshTokenDto;
 import com.wish.dms_api.dto.RegisterDto;
 import com.wish.dms_api.dto.UserResponseDto;
 import com.wish.dms_api.response.ResponseHandler;
+import com.wish.dms_api.security.JwtService;
 import com.wish.dms_api.service.IAuthService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
-
 
 
 @RestController
@@ -32,6 +33,8 @@ public class AuthController {
 
 	@Autowired
 	private IAuthService authService;
+	
+	@Autowired JwtService jwtService;
 	
 	@Operation(summary = "Register new user" , description = "Register new user")
 	@PostMapping("/register")
@@ -67,5 +70,17 @@ public class AuthController {
 		LoginResponseDto loginResponseDto= authService.refreshToken(refreshTokenDto);
 		return new ResponseEntity<>(loginResponseDto, HttpStatus.OK);
 	}
+	
+	
+	@PostMapping("/logout")
+    public ResponseEntity<?> logout(HttpServletRequest request) {
+        String token = request.getHeader("Authorization");
+        if (token != null) 
+ {
+            // Invalidate the token (e.g., mark it as revoked in the database)
+            jwtService.invalidateToken(token);
+        }
+        return new ResponseEntity<>("Logged Out Successfully",HttpStatus.OK);
+    }
 }
 

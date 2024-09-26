@@ -15,6 +15,7 @@ import com.wish.dms_api.dto.DocumentByUserDto;
 import com.wish.dms_api.dto.DocumentRequestDto;
 import com.wish.dms_api.dto.DocumentResponseDto;
 import com.wish.dms_api.dto.DocumentUpdateDto;
+import com.wish.dms_api.entity.User;
 //import com.wish.dms_api.entity.DocumentType;
 //import com.wish.dms_api.entity.Document;
 
@@ -30,13 +31,16 @@ public interface IDocumentService {
 	
 	DocumentResponseDto updateDocument(DocumentUpdateDto documentUpdateDto, Long id );
 	
-	List<DocumentResponseDto> getDocByUser(Long userId);
+	List<DocumentResponseDto> getDocByUserId(Long userId);
 	
 	List<DocumentResponseDto> getDocumentByTag(String tag);
 	
 	List<DocumentResponseDto> getDocumentByDocumentType(Long id);
 	
 	List<DocumentResponseDto> getDocumentByDate(LocalDate date);
+	
+	List<DocumentResponseDto> getDocumentByUser();
+	
 
 //	List<DocumentResponseDto> getDocumentByDate(String date);
 	

@@ -108,6 +108,7 @@ public class DocumentService implements IDocumentService{
 		documentResponseDto.setUser_id(document.getUser().getId());
 		documentResponseDto.setDocument_type(document.getDocumentType().getName());
 		documentResponseDto.setUrl(baseUrl);
+		System.out.println(documentResponseDto);
 		return documentResponseDto;
 		}catch(Exception ex) {
 			ex.printStackTrace();
@@ -197,14 +198,19 @@ public class DocumentService implements IDocumentService{
 			String time= String.valueOf(System.currentTimeMillis());
 			Document document= documentRepository.findById(id).get();
 			Files.createDirectories(Paths.get(uploadDir));
-			Path filePath= Paths.get(uploadDir+file.getOriginalFilename());
+			Path filePath= Paths.get(uploadDir+time+file.getOriginalFilename());
 			document.setOriginal_name(file.getOriginalFilename());
 			document.setPath(filePath.toString());
 			document.setFile_name(time+file.getOriginalFilename());
 			document.setExtension(getFileExtension(file.getOriginalFilename()));
 			document.setMime_type(file.getContentType());
-	//		document.setCreated_at(new Date());
+			document.setCreatedat(new Date());
 			document.setUpdated_at(new Date());
+			DocumentType documentType= documentTypeRepository.findByName(getDocType(getFileExtension(file.getOriginalFilename())));
+			document.setDocumentType(documentType);
+			User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
+			document.setUser(user);	
 			
 			documentRepository.save(document);
 			DocumentResponseDto documentResponseDto= mapper.map(document, DocumentResponseDto.class);
@@ -221,7 +227,7 @@ public class DocumentService implements IDocumentService{
 
 
 	@Override
-	 public List<DocumentResponseDto> getDocByUser(Long userId) {
+	 public List<DocumentResponseDto> getDocByUserId(Long userId) {
         List<Document> documents = documentRepository.findByUserId(userId);
         List<DocumentResponseDto> documentDTOs = new ArrayList<>();
         for (Document document : documents) {
@@ -327,6 +333,36 @@ public class DocumentService implements IDocumentService{
 		}
 		return documentDtos;
 	}
+
+
+
+	@Override
+	public List<DocumentResponseDto> getDocumentByUser() {
+		
+		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
+		
+		List<Document> documents = documentRepository.findByUserId(user.getId());
+        List<DocumentResponseDto> documentDTOs = new ArrayList<>();
+        for (Document document : documents) {
+        	DocumentResponseDto documentDTO = new DocumentResponseDto();
+            documentDTO.setId(document.getId());
+            documentDTO.setFile_name(document.getFile_name());
+            documentDTO.setDocument_type(document.getDocumentType().getName());
+            documentDTO.setExtension(document.getExtension());
+            documentDTO.setMime_type(document.getMime_type());
+            documentDTO.setOriginal_name(document.getOriginal_name());
+            documentDTO.setPath(document.getPath());
+            documentDTO.setUser_id(document.getUser().getId());
+            documentDTO.setUrl(baseUrl);
+//            documentDTO.setType(document.getDocType());
+            documentDTOs.add(documentDTO);
+        }
+        return documentDTOs;
+	}
+	
+	
+	
 	
 	
 	

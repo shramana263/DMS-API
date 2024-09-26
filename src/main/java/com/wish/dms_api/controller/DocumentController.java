@@ -83,7 +83,7 @@ public class DocumentController {
     public ResponseEntity<List<DocumentResponseDto>> getDocByUserId(@PathVariable Long id){
     	System.out.println("get all documents of user");
     	try {
-    		List<DocumentResponseDto> docs= documentService.getDocByUser(id);
+    		List<DocumentResponseDto> docs= documentService.getDocByUserId(id);
     		return new ResponseEntity<>(docs,HttpStatus.ACCEPTED);
     	}catch(Exception ex) {
     		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -122,6 +122,20 @@ public class DocumentController {
     		ex.printStackTrace();
     		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     	}
+    }
+    
+    
+  //get documents against a specific user
+    @GetMapping("/getbytoken")
+    public ResponseEntity<List<DocumentResponseDto>> getDocByUser(){
+    	System.out.println("get all documents of user");
+    	try {
+    		List<DocumentResponseDto> docs= documentService.getDocumentByUser();
+    		return new ResponseEntity<>(docs,HttpStatus.ACCEPTED);
+    	}catch(Exception ex) {
+    		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    	}
+    	
     }
 }
 	
