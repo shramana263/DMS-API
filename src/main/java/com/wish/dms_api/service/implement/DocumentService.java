@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -18,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.wish.dms_api.dto.DocumentByUserDto;
@@ -34,7 +37,10 @@ import com.wish.dms_api.repository.IDocumentRepository;
 import com.wish.dms_api.repository.IDocumentTypeRepository;
 //import com.wish.dms_api.repository.IDocumentTypeRepository;
 import com.wish.dms_api.repository.IUserRepository;
+import com.wish.dms_api.security.JwtService;
 import com.wish.dms_api.service.IDocumentService;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @Service
 public class DocumentService implements IDocumentService{
@@ -46,6 +52,7 @@ public class DocumentService implements IDocumentService{
 	
 	@Autowired IDocTagRepository docTagRepository;
 	@Autowired IDocumentTypeRepository documentTypeRepository;
+	@Autowired JwtService jwtService;
 	
 //	@Autowired DocConverter docConverter;
     private final String uploadDir = "D:/springboot/dms-api/src/main/resources/static/documents/";
@@ -254,12 +261,28 @@ public class DocumentService implements IDocumentService{
 		System.out.println("hello by tag");
 //		
 //		UserSingleton userSingleton = (UserSingleton)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		User user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
+//		User currentUserDetails= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//		var user= userRepository.findById(currentUserDetails.getId()).orElseThrow();
+		
+		
+		HttpServletRequest request = ((ServletRequestAttributes) Objects
+              .requireNonNull(RequestContextHolder.getRequestAttributes()))
+              .getRequest();
+      String token = request.getHeader("Authorization");
+
+      if (token != null && token.startsWith("Bearer ")) {
+          token = token.substring(7); // Remove "Bearer " from the token
+      }
+
+      String username = jwtService.extractUsername(token);
+      User user = userRepository.findByUsername(username).orElseThrow();
+
+		
+		
 		
 		List<Document> documents=documentRepository.findByTags(tag, user);
 		List<DocumentResponseDto> documentDtos= new ArrayList<>();
-		System.out.println("document"+documents);
+//		System.out.println("document" + documents);
 		for(Document document: documents) {
 			DocumentResponseDto res= new DocumentResponseDto();
 			res.setId(document.getId());
@@ -269,8 +292,8 @@ public class DocumentService implements IDocumentService{
 			res.setMime_type(document.getMime_type());
 			res.setExtension(document.getExtension());
 			res.setUser_id(document.getUser().getId());
-//			res.setDocumentType(document.getDocumentType());
-			
+			res.setDocument_type(document.getDocumentType().getName());
+			res.setUrl(baseUrl);
 			
 			documentDtos.add(res);
 		}
@@ -294,7 +317,7 @@ public class DocumentService implements IDocumentService{
 			res.setExtension(document.getExtension());
 			res.setUser_id(document.getUser().getId());
 			res.setDocument_type(document.getDocumentType().getName());
-			
+			res.setUrl(baseUrl);
 			
 			documentDtos.add(res);
 		}
@@ -327,6 +350,7 @@ public class DocumentService implements IDocumentService{
 			res.setUser_id(document.getUser().getId());
 //			res.setDocument_type(document.getDocumentType().getName());
 			res.setDocument_type(document.getDocumentType().getName());
+			res.setUrl(baseUrl);
 			
 			
 			documentDtos.add(res);
