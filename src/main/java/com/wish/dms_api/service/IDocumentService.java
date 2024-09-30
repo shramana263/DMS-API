@@ -23,7 +23,7 @@ public interface IDocumentService {
 	
 	
 //	 Document uploadDocument(MultipartFile file) throws IOException;
-	DocumentResponseDto uploadDocument(DocumentRequestDto documentRequestDto);
+	List<DocumentResponseDto> uploadDocument(DocumentRequestDto documentRequestDto);
 	
 	List<DocumentResponseDto> getAllDocs();
 	

@@ -16,6 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 //import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
 //import com.wish.dms_api.dto.DocumentByDocTypeDto;
 import com.wish.dms_api.dto.DocumentByUserDto;
@@ -43,11 +45,20 @@ public class DocumentController {
 	@Autowired IDocumentService documentService;
 
     @PostMapping("/upload")
-    public ResponseEntity<DocumentResponseDto> store(@Validated DocumentRequestDto requestDto) {
-        try {
-            DocumentResponseDto doc = documentService.uploadDocument(requestDto);
+    public ResponseEntity<List<DocumentResponseDto>> store(
+            @ModelAttribute DocumentRequestDto documentRequestDto,
+            @RequestParam("files") List<MultipartFile> files) {
+        
+    	   if (files.isEmpty()) {
+               return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+           }
+    	
+    	try {
+            List<DocumentResponseDto> doc = documentService.uploadDocument(documentRequestDto);
             return new ResponseEntity<>(doc,HttpStatus.CREATED);
         } catch (Exception e) {
+        	e.printStackTrace();
+        	System.out.println("Not found");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

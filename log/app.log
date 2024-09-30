@@ -6654,3 +6654,832 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 [2024-09-28 02:17:32,516] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(88)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2024-09-28 02:17:32,608] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(88)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
 [2024-09-28 02:17:32,632] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(88)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-28 23:22:56,159] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 84 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-28 23:22:56,161] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-28 23:22:56,162] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-28 23:22:56,223] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-28 23:22:56,223] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-28 23:22:57,603] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-28 23:22:57,677] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+[2024-09-28 23:22:58,438] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-28 23:22:58,456] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-28 23:22:58,456] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-28 23:22:58,518] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-28 23:22:58,518] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 2294 ms
+[2024-09-28 23:22:58,680] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-28 23:22:58,801] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-28 23:22:58,888] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-28 23:22:59,324] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-28 23:22:59,365] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-28 23:22:59,932] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4274a0c8
+[2024-09-28 23:22:59,935] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-28 23:23:00,065] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-28 23:23:00,066] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-28 23:23:01,082] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-28 23:23:01,281] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-28 23:23:01,666] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-28 23:23:01,846] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-28 23:23:01,895] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-28 23:23:01,932] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-28 23:23:02,728] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-28 23:23:02,889] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-28 23:23:02,926] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-28 23:23:02,936] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 7.145 seconds (process running for 8.316)
+[2024-09-29 00:32:49,204] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m18s70ms711µs).
+[2024-09-29 00:46:18,003] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 00:46:18,018] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 00:46:18,140] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 117 ms
+[2024-09-29 00:46:19,376] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-4] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 2585028 milliseconds ago at 2024-09-28T18:33:14.000Z. Current time: 2024-09-28T19:16:19.028Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-29 00:46:19,398] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-4] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 2585389 milliseconds ago at 2024-09-28T18:33:14.000Z. Current time: 2024-09-28T19:16:19.389Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-29 00:46:20,411] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-5] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 2586406 milliseconds ago at 2024-09-28T18:33:14.000Z. Current time: 2024-09-28T19:16:20.406Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-29 00:46:22,435] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-7] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 2588431 milliseconds ago at 2024-09-28T18:33:14.000Z. Current time: 2024-09-28T19:16:22.431Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-29 03:05:21,782] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(216)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-29 03:05:21,817] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(216)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 03:05:21,825] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(216)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-29 03:05:21,840] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(216)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-29 12:46:42,330] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 3780 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-29 12:46:42,332] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-29 12:46:42,332] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-29 12:46:42,394] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-29 12:46:42,394] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-29 12:46:43,625] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-29 12:46:43,687] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+[2024-09-29 12:46:44,307] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-29 12:46:44,326] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-29 12:46:44,327] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-29 12:46:44,401] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-29 12:46:44,401] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 2007 ms
+[2024-09-29 12:46:44,532] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-29 12:46:44,627] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-29 12:46:44,694] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-29 12:46:45,095] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-29 12:46:45,133] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-29 12:46:45,596] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b84fc46
+[2024-09-29 12:46:45,601] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-29 12:46:45,785] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-29 12:46:45,787] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-29 12:46:46,822] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-29 12:46:47,074] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 12:46:47,512] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-29 12:46:47,663] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-29 12:46:47,721] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-29 12:46:47,769] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-29 12:46:48,573] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-29 12:46:48,759] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-29 12:46:48,802] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-29 12:46:48,812] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 6.839 seconds (process running for 13.616)
+[2024-09-29 12:46:54,428] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 12:46:54,429] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 12:46:54,430] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 1 ms
+[2024-09-29 13:17:25,286] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(34)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-29 13:17:25,349] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(34)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 13:17:25,365] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(34)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-29 13:17:25,380] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(34)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-29 13:36:37,736] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 22224 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-29 13:36:37,738] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-29 13:36:37,740] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-29 13:36:37,823] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-29 13:36:37,823] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-29 13:36:39,397] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-29 13:36:39,570] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 143 ms. Found 4 JPA repository interfaces.
+[2024-09-29 13:36:40,415] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-29 13:36:40,439] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-29 13:36:40,439] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-29 13:36:40,507] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-29 13:36:40,508] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 2685 ms
+[2024-09-29 13:36:40,676] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-29 13:36:40,780] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-29 13:36:40,835] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-29 13:36:41,221] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-29 13:36:41,259] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-29 13:36:41,659] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@798cf824
+[2024-09-29 13:36:41,662] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-29 13:36:41,747] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-29 13:36:41,749] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-29 13:36:42,972] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-29 13:36:43,138] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 13:36:43,616] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-29 13:36:43,780] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-29 13:36:43,879] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-29 13:36:43,926] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-29 13:36:44,680] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-29 13:36:44,860] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-29 13:36:44,904] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-29 13:36:44,914] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 7.635 seconds (process running for 8.97)
+[2024-09-29 14:01:54,914] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 14:01:54,914] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 14:01:54,922] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 0 ms
+[2024-09-29 14:02:10,109] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-7] [247] [WARN ] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "image"]
+[2024-09-29 14:02:21,550] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-1] [247] [WARN ] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "IMAGE"]
+[2024-09-29 14:10:52,792] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(38)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-29 14:10:52,875] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(38)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 14:10:52,899] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(38)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-29 14:10:52,916] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(38)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-29 16:05:58,203] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 8420 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-29 16:05:58,208] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-29 16:05:58,211] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-29 16:05:58,372] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-29 16:05:58,373] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-29 16:06:00,868] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-29 16:06:01,008] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 120 ms. Found 4 JPA repository interfaces.
+[2024-09-29 16:06:02,200] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-29 16:06:02,231] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-29 16:06:02,231] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-29 16:06:02,307] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-29 16:06:02,308] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 3932 ms
+[2024-09-29 16:06:02,496] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-29 16:06:02,602] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-29 16:06:02,665] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-29 16:06:03,158] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-29 16:06:03,219] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-29 16:06:03,854] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dfa4f5e
+[2024-09-29 16:06:03,858] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-29 16:06:03,993] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-29 16:06:03,995] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-29 16:06:05,662] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-29 16:06:05,827] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 16:06:06,313] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-29 16:06:06,558] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-29 16:06:06,664] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-29 16:06:06,743] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-29 16:06:07,634] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-29 16:06:07,793] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-29 16:06:07,828] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-29 16:06:07,836] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 10.918 seconds (process running for 22.965)
+[2024-09-29 16:08:33,420] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 16:08:33,420] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 16:08:33,436] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 16 ms
+[2024-09-29 16:35:57,255] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-6] [247] [WARN ] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 1725367114241drink1.jpg.]
+[2024-09-29 16:35:57,255] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-5] [247] [WARN ] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 1725292850877drink3.jpg.]
+[2024-09-29 16:35:57,255] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-9] [247] [WARN ] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 1725283610990pasta1.jpg.]
+[2024-09-29 16:35:57,255] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-4] [247] [WARN ] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 1725293072773drink1.jpg.]
+[2024-09-29 17:11:23,355] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s497ms936µs201ns).
+[2024-09-29 18:25:16,841] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(143)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-29 18:25:16,950] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(143)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 18:25:16,981] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(143)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-29 18:25:17,046] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(143)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-29 18:42:09,557] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 22288 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-29 18:42:09,559] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-29 18:42:09,560] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-29 18:42:09,652] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-29 18:42:09,652] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-29 18:42:10,809] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-29 18:42:10,876] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+[2024-09-29 18:42:11,496] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-29 18:42:11,514] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-29 18:42:11,514] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-29 18:42:11,573] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-29 18:42:11,573] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 1921 ms
+[2024-09-29 18:42:11,724] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-29 18:42:11,818] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-29 18:42:11,868] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-29 18:42:12,236] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-29 18:42:12,280] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-29 18:42:12,782] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120a1dc7
+[2024-09-29 18:42:12,784] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-29 18:42:12,883] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-29 18:42:12,885] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-29 18:42:14,021] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-29 18:42:14,220] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 18:42:14,746] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-29 18:42:15,056] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-29 18:42:15,159] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-29 18:42:15,247] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-29 18:42:16,640] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-29 18:42:17,012] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-29 18:42:17,129] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-29 18:42:17,159] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 8.071 seconds (process running for 15.586)
+[2024-09-29 18:42:36,077] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 18:42:36,077] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 18:42:36,079] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 2 ms
+[2024-09-29 18:56:36,090] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m23s77ms938µs600ns).
+[2024-09-29 19:02:08,844] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s672ms71µs600ns).
+[2024-09-29 21:38:50,220] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(174)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-29 21:38:50,250] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(174)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 21:38:50,255] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(174)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-29 21:38:50,263] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(174)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-29 22:17:33,483] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 8936 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-29 22:17:33,484] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-29 22:17:33,485] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-29 22:17:33,550] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-29 22:17:33,550] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-29 22:17:34,738] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-29 22:17:34,807] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+[2024-09-29 22:17:35,417] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-29 22:17:35,436] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-29 22:17:35,436] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-29 22:17:35,494] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-29 22:17:35,495] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 1945 ms
+[2024-09-29 22:17:35,633] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-29 22:17:35,718] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-29 22:17:35,766] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-29 22:17:36,110] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-29 22:17:36,146] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-29 22:17:36,634] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@110b2ad0
+[2024-09-29 22:17:36,636] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-29 22:17:36,799] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-29 22:17:36,801] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-29 22:17:37,822] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-29 22:17:38,090] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-29 22:17:38,538] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-29 22:17:38,700] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-29 22:17:38,753] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-29 22:17:38,823] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-29 22:17:39,641] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-29 22:17:39,810] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-29 22:17:39,856] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-29 22:17:39,866] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 6.84 seconds (process running for 8.253)
+[2024-09-29 22:24:27,522] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-29 22:24:27,522] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-29 22:24:27,531] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 0 ms
+[2024-09-29 23:02:10,468] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m3s501ms552µs600ns).
+[2024-09-29 23:27:51,697] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m41s177ms368µs200ns).
+[2024-09-30 00:16:16,818] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [797] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m54s471ms914µs700ns).
+[2024-09-30 00:47:38,176] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-3] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 41001 milliseconds ago at 2024-09-29T19:16:57.000Z. Current time: 2024-09-29T19:17:38.001Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-30 00:47:39,198] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-1] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 42198 milliseconds ago at 2024-09-29T19:16:57.000Z. Current time: 2024-09-29T19:17:39.198Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-30 00:47:41,222] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-7] [247] [WARN ] Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 44221 milliseconds ago at 2024-09-29T19:16:57.000Z. Current time: 2024-09-29T19:17:41.221Z. Allowed clock skew: 0 milliseconds.]
+[2024-09-30 03:42:30,307] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(274)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-30 03:42:30,386] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(274)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 03:42:30,410] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(274)-127.0.0.1] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-30 03:42:30,422] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(274)-127.0.0.1] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-30 16:08:06,239] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 16:08:06,243] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 16:08:06,244] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 16:08:06,365] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-09-30 16:08:06,365] [org.springframework.boot.logging.DeferredLog] [restartedMain] [252] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-09-30 16:08:08,038] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 16:08:08,128] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+[2024-09-30 16:08:08,903] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 16:08:08,923] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 16:08:08,923] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 16:08:08,987] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 16:08:08,987] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 2622 ms
+[2024-09-30 16:08:09,166] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 16:08:09,278] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-30 16:08:09,358] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 16:08:09,858] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 16:08:09,888] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-1 - Starting...
+[2024-09-30 16:08:10,260] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c6e67bd
+[2024-09-30 16:08:10,271] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-1 - Start completed.
+[2024-09-30 16:08:10,352] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 16:08:10,354] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 16:08:11,517] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 16:08:11,715] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 16:08:12,156] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 16:08:12,330] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 16:08:12,388] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 16:08:12,428] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [restartedMain] [49] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-09-30 16:08:13,255] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 16:08:13,459] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 16:08:13,507] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 16:08:13,521] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 7.813 seconds (process running for 9.769)
+[2024-09-30 16:10:05,176] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 16:10:05,176] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 16:10:05,189] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 10 ms
+[2024-09-30 17:06:09,990] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+[2024-09-30 17:06:10,035] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-5] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:06:10,049] [com.zaxxer.hikari.HikariDataSource] [Thread-5] [349] [INFO ] HikariPool-1 - Shutdown initiated...
+[2024-09-30 17:06:10,059] [com.zaxxer.hikari.HikariDataSource] [Thread-5] [351] [INFO ] HikariPool-1 - Shutdown completed.
+[2024-09-30 17:06:10,367] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 17:06:10,367] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 17:06:10,367] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 17:06:10,827] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 17:06:10,841] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+[2024-09-30 17:06:10,972] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 17:06:10,973] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 17:06:10,974] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 17:06:11,002] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 17:06:11,003] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 633 ms
+[2024-09-30 17:06:11,067] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 17:06:11,069] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 17:06:11,079] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 17:06:11,081] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-2 - Starting...
+[2024-09-30 17:06:11,105] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@727a1a5f
+[2024-09-30 17:06:11,106] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-2 - Start completed.
+[2024-09-30 17:06:11,106] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 17:06:11,106] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 17:06:11,224] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 17:06:11,304] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:06:11,419] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 17:06:11,472] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 17:06:11,488] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 17:06:11,703] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 17:06:11,839] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 17:06:11,866] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 17:06:11,875] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 1.568 seconds (process running for 3488.124)
+[2024-09-30 17:06:11,880] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 17:13:41,407] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+[2024-09-30 17:13:41,420] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-7] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:13:41,421] [com.zaxxer.hikari.HikariDataSource] [Thread-7] [349] [INFO ] HikariPool-2 - Shutdown initiated...
+[2024-09-30 17:13:41,426] [com.zaxxer.hikari.HikariDataSource] [Thread-7] [351] [INFO ] HikariPool-2 - Shutdown completed.
+[2024-09-30 17:13:41,533] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 17:13:41,534] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 17:13:41,534] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 17:13:41,811] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 17:13:41,826] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+[2024-09-30 17:13:41,991] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 17:13:41,993] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 17:13:41,994] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 17:13:42,014] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 17:13:42,015] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 479 ms
+[2024-09-30 17:13:42,063] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 17:13:42,067] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 17:13:42,077] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 17:13:42,078] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-3 - Starting...
+[2024-09-30 17:13:42,097] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6319b7e0
+[2024-09-30 17:13:42,098] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-3 - Start completed.
+[2024-09-30 17:13:42,098] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 17:13:42,099] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 17:13:42,266] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 17:13:42,302] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:13:42,357] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 17:13:42,396] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 17:13:42,407] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 17:13:42,506] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 17:13:42,546] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 17:13:42,559] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 17:13:42,562] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 1.061 seconds (process running for 3938.81)
+[2024-09-30 17:13:42,563] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 17:25:45,956] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[2024-09-30 17:25:45,969] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-11] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:25:45,971] [com.zaxxer.hikari.HikariDataSource] [Thread-11] [349] [INFO ] HikariPool-3 - Shutdown initiated...
+[2024-09-30 17:25:45,985] [com.zaxxer.hikari.HikariDataSource] [Thread-11] [351] [INFO ] HikariPool-3 - Shutdown completed.
+[2024-09-30 17:25:46,070] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 17:25:46,070] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 17:25:46,071] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 17:25:46,231] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 17:25:46,240] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+[2024-09-30 17:25:46,314] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 17:25:46,315] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 17:25:46,315] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 17:25:46,325] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 17:25:46,326] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 254 ms
+[2024-09-30 17:25:46,350] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 17:25:46,360] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 17:25:46,370] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 17:25:46,389] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-4 - Starting...
+[2024-09-30 17:25:46,414] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73f56bca
+[2024-09-30 17:25:46,414] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-4 - Start completed.
+[2024-09-30 17:25:46,415] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 17:25:46,415] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 17:25:46,474] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 17:25:46,541] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:25:46,589] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 17:25:46,620] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 17:25:46,633] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 17:25:46,720] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 17:25:46,769] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 17:25:46,778] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 17:25:46,783] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.734 seconds (process running for 4663.031)
+[2024-09-30 17:25:46,784] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 17:27:21,385] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[2024-09-30 17:27:21,393] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-15] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:27:21,394] [com.zaxxer.hikari.HikariDataSource] [Thread-15] [349] [INFO ] HikariPool-4 - Shutdown initiated...
+[2024-09-30 17:27:21,396] [com.zaxxer.hikari.HikariDataSource] [Thread-15] [351] [INFO ] HikariPool-4 - Shutdown completed.
+[2024-09-30 17:27:21,469] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 17:27:21,469] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 17:27:21,469] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 17:27:21,603] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 17:27:21,612] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+[2024-09-30 17:27:21,671] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 17:27:21,672] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 17:27:21,672] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 17:27:21,682] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 17:27:21,682] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 212 ms
+[2024-09-30 17:27:21,708] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 17:27:21,711] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 17:27:21,734] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 17:27:21,735] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-5 - Starting...
+[2024-09-30 17:27:21,753] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@194dc6d7
+[2024-09-30 17:27:21,754] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-5 - Start completed.
+[2024-09-30 17:27:21,754] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 17:27:21,755] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 17:27:21,814] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 17:27:21,865] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:27:21,928] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 17:27:21,955] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 17:27:21,970] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 17:27:22,060] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 17:27:22,110] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 17:27:22,121] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 17:27:22,123] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.674 seconds (process running for 4758.372)
+[2024-09-30 17:27:22,124] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 17:54:28,505] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 17:54:28,513] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-19] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:54:28,515] [com.zaxxer.hikari.HikariDataSource] [Thread-19] [349] [INFO ] HikariPool-5 - Shutdown initiated...
+[2024-09-30 17:54:28,524] [com.zaxxer.hikari.HikariDataSource] [Thread-19] [351] [INFO ] HikariPool-5 - Shutdown completed.
+[2024-09-30 17:54:28,618] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 17:54:28,618] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 17:54:28,619] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 17:54:28,852] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 17:54:28,861] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+[2024-09-30 17:54:28,957] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 17:54:28,958] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 17:54:28,959] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 17:54:28,971] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 17:54:28,971] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 350 ms
+[2024-09-30 17:54:28,997] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 17:54:28,999] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 17:54:29,006] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 17:54:29,007] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-6 - Starting...
+[2024-09-30 17:54:29,021] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58415c2c
+[2024-09-30 17:54:29,022] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-6 - Start completed.
+[2024-09-30 17:54:29,023] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 17:54:29,023] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 17:54:29,119] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 17:54:29,167] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 17:54:29,216] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 17:54:29,260] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 17:54:29,273] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 17:54:29,384] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 17:54:29,439] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 17:54:29,453] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 17:54:29,458] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.869 seconds (process running for 6385.707)
+[2024-09-30 17:54:29,460] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:04:52,355] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:04:52,384] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-23] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:04:52,387] [com.zaxxer.hikari.HikariDataSource] [Thread-23] [349] [INFO ] HikariPool-6 - Shutdown initiated...
+[2024-09-30 18:04:52,395] [com.zaxxer.hikari.HikariDataSource] [Thread-23] [351] [INFO ] HikariPool-6 - Shutdown completed.
+[2024-09-30 18:04:52,502] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:04:52,502] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:04:52,503] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:04:52,630] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:04:52,640] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:04:52,701] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:04:52,701] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:04:52,701] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:04:52,713] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:04:52,713] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 208 ms
+[2024-09-30 18:04:52,733] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:04:52,734] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:04:52,739] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:04:52,739] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-7 - Starting...
+[2024-09-30 18:04:52,754] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@531b96b3
+[2024-09-30 18:04:52,754] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-7 - Start completed.
+[2024-09-30 18:04:52,755] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:04:52,755] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:04:52,844] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:04:52,902] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:04:52,951] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:04:52,976] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:04:52,985] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:04:53,061] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:04:53,087] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:04:53,100] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:04:53,102] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.62 seconds (process running for 7009.35)
+[2024-09-30 18:04:53,103] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:05:03,683] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[2024-09-30 18:05:03,691] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-27] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:03,692] [com.zaxxer.hikari.HikariDataSource] [Thread-27] [349] [INFO ] HikariPool-7 - Shutdown initiated...
+[2024-09-30 18:05:03,698] [com.zaxxer.hikari.HikariDataSource] [Thread-27] [351] [INFO ] HikariPool-7 - Shutdown completed.
+[2024-09-30 18:05:03,775] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:05:03,775] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:05:03,776] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:05:03,893] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:05:03,902] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:05:03,962] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:05:03,963] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:05:03,963] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:05:03,973] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:05:03,973] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 196 ms
+[2024-09-30 18:05:03,992] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:05:03,993] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:05:03,997] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:05:03,999] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-8 - Starting...
+[2024-09-30 18:05:04,011] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@105729d0
+[2024-09-30 18:05:04,011] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-8 - Start completed.
+[2024-09-30 18:05:04,013] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:05:04,013] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:05:04,082] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:05:04,146] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:04,184] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:05:04,207] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:05:04,216] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:05:04,289] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:05:04,316] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:05:04,325] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:05:04,327] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.568 seconds (process running for 7020.576)
+[2024-09-30 18:05:04,329] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:05:33,368] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:05:33,374] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-31] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:33,375] [com.zaxxer.hikari.HikariDataSource] [Thread-31] [349] [INFO ] HikariPool-8 - Shutdown initiated...
+[2024-09-30 18:05:33,382] [com.zaxxer.hikari.HikariDataSource] [Thread-31] [351] [INFO ] HikariPool-8 - Shutdown completed.
+[2024-09-30 18:05:33,453] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:05:33,453] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:05:33,453] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:05:33,585] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:05:33,594] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:05:33,658] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:05:33,660] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:05:33,660] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:05:33,672] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:05:33,672] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 218 ms
+[2024-09-30 18:05:33,693] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:05:33,694] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:05:33,699] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:05:33,699] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-9 - Starting...
+[2024-09-30 18:05:33,714] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b28a67
+[2024-09-30 18:05:33,714] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-9 - Start completed.
+[2024-09-30 18:05:33,715] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:05:33,715] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:05:33,791] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:05:33,845] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:33,886] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:05:33,909] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:05:33,917] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:05:34,002] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:05:34,029] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:05:34,039] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:05:34,042] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.605 seconds (process running for 7050.29)
+[2024-09-30 18:05:34,043] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:05:44,626] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:05:44,633] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-35] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:44,633] [com.zaxxer.hikari.HikariDataSource] [Thread-35] [349] [INFO ] HikariPool-9 - Shutdown initiated...
+[2024-09-30 18:05:44,638] [com.zaxxer.hikari.HikariDataSource] [Thread-35] [351] [INFO ] HikariPool-9 - Shutdown completed.
+[2024-09-30 18:05:44,724] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:05:44,724] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:05:44,724] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:05:44,873] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:05:44,887] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:05:44,951] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:05:44,951] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:05:44,951] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:05:44,964] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:05:44,964] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 238 ms
+[2024-09-30 18:05:44,985] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:05:44,987] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:05:44,992] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:05:44,993] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-10 - Starting...
+[2024-09-30 18:05:45,007] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e781dab
+[2024-09-30 18:05:45,007] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-10 - Start completed.
+[2024-09-30 18:05:45,008] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:05:45,008] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:05:45,079] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:05:45,128] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:05:45,170] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:05:45,192] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:05:45,201] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:05:45,272] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:05:45,295] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:05:45,307] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:05:45,310] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.606 seconds (process running for 7061.558)
+[2024-09-30 18:05:45,311] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:06:01,847] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-6] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:06:01,847] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-6] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:06:01,850] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-6] [554] [INFO ] Completed initialization in 3 ms
+[2024-09-30 18:08:28,575] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-1] [247] [WARN ] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.List<com.wish.dms_api.dto.DocumentResponseDto>> com.wish.dms_api.controller.DocumentController.store(com.wish.dms_api.dto.DocumentRequestDto): [Field error in object 'documentRequestDto' on field 'files': rejected value [null]; codes [NotNull.documentRequestDto.files,NotNull.files,NotNull.[Lorg.springframework.web.multipart.MultipartFile;,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [documentRequestDto.files,files]; arguments []; default message [files]]; default message [No file is selected]] ]
+[2024-09-30 18:11:16,715] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:11:16,762] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-39] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:11:16,777] [com.zaxxer.hikari.HikariDataSource] [Thread-39] [349] [INFO ] HikariPool-10 - Shutdown initiated...
+[2024-09-30 18:11:16,801] [com.zaxxer.hikari.HikariDataSource] [Thread-39] [351] [INFO ] HikariPool-10 - Shutdown completed.
+[2024-09-30 18:11:16,999] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:11:17,001] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:11:17,001] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:11:17,168] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:11:17,177] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:11:17,249] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:11:17,250] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:11:17,250] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:11:17,264] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:11:17,264] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 261 ms
+[2024-09-30 18:11:17,296] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:11:17,297] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:11:17,302] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:11:17,303] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-11 - Starting...
+[2024-09-30 18:11:17,326] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@208da139
+[2024-09-30 18:11:17,326] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-11 - Start completed.
+[2024-09-30 18:11:17,327] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:11:17,327] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:11:17,421] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:11:17,510] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:11:17,564] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:11:17,589] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:11:17,598] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:11:17,679] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:11:17,717] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:11:17,731] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:11:17,734] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.76 seconds (process running for 7393.983)
+[2024-09-30 18:11:17,735] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:12:29,711] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-3] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:12:29,711] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-3] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:12:29,715] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-3] [554] [INFO ] Completed initialization in 4 ms
+[2024-09-30 18:12:29,762] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-3] [247] [WARN ] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.List<com.wish.dms_api.dto.DocumentResponseDto>> com.wish.dms_api.controller.DocumentController.store(com.wish.dms_api.dto.DocumentRequestDto): [Field error in object 'documentRequestDto' on field 'files': rejected value [null]; codes [NotNull.documentRequestDto.files,NotNull.files,NotNull.[Lorg.springframework.web.multipart.MultipartFile;,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [documentRequestDto.files,files]; arguments []; default message [files]]; default message [No file is selected]] ]
+[2024-09-30 18:12:51,153] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:12:51,161] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-43] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:12:51,162] [com.zaxxer.hikari.HikariDataSource] [Thread-43] [349] [INFO ] HikariPool-11 - Shutdown initiated...
+[2024-09-30 18:12:51,167] [com.zaxxer.hikari.HikariDataSource] [Thread-43] [351] [INFO ] HikariPool-11 - Shutdown completed.
+[2024-09-30 18:12:51,250] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:12:51,250] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:12:51,250] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:12:51,377] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:12:51,385] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:12:51,457] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:12:51,457] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:12:51,457] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:12:51,469] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:12:51,469] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 217 ms
+[2024-09-30 18:12:51,497] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:12:51,499] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:12:51,502] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:12:51,503] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-12 - Starting...
+[2024-09-30 18:12:51,521] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@413e9bdc
+[2024-09-30 18:12:51,521] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-12 - Start completed.
+[2024-09-30 18:12:51,523] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:12:51,523] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:12:51,628] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:12:51,678] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:12:51,733] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:12:51,763] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:12:51,775] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:12:51,863] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:12:51,897] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:12:51,910] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:12:51,914] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.684 seconds (process running for 7488.162)
+[2024-09-30 18:12:51,915] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:12:53,309] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:12:53,309] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:12:53,310] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 1 ms
+[2024-09-30 18:12:53,367] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-2] [247] [WARN ] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.List<com.wish.dms_api.dto.DocumentResponseDto>> com.wish.dms_api.controller.DocumentController.store(com.wish.dms_api.dto.DocumentRequestDto): [Field error in object 'documentRequestDto' on field 'files': rejected value [null]; codes [NotNull.documentRequestDto.files,NotNull.files,NotNull.[Lorg.springframework.web.multipart.MultipartFile;,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [documentRequestDto.files,files]; arguments []; default message [files]]; default message [No file is selected]] ]
+[2024-09-30 18:14:43,962] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:14:43,969] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-47] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:14:43,970] [com.zaxxer.hikari.HikariDataSource] [Thread-47] [349] [INFO ] HikariPool-12 - Shutdown initiated...
+[2024-09-30 18:14:43,974] [com.zaxxer.hikari.HikariDataSource] [Thread-47] [351] [INFO ] HikariPool-12 - Shutdown completed.
+[2024-09-30 18:14:44,054] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:14:44,054] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:14:44,054] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:14:44,249] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:14:44,260] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:14:44,330] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:14:44,331] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:14:44,331] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:14:44,343] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:14:44,343] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 287 ms
+[2024-09-30 18:14:44,365] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:14:44,366] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:14:44,371] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:14:44,372] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-13 - Starting...
+[2024-09-30 18:14:44,389] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45d65a8b
+[2024-09-30 18:14:44,390] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-13 - Start completed.
+[2024-09-30 18:14:44,390] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:14:44,391] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:14:44,444] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:14:44,493] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:14:44,592] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:14:44,623] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:14:44,638] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:14:44,728] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:14:44,757] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:14:44,767] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:14:44,770] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.734 seconds (process running for 7601.018)
+[2024-09-30 18:14:44,770] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:15:06,635] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:15:06,642] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-51] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:15:06,642] [com.zaxxer.hikari.HikariDataSource] [Thread-51] [349] [INFO ] HikariPool-13 - Shutdown initiated...
+[2024-09-30 18:15:06,648] [com.zaxxer.hikari.HikariDataSource] [Thread-51] [351] [INFO ] HikariPool-13 - Shutdown completed.
+[2024-09-30 18:15:06,731] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:15:06,731] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:15:06,731] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:15:06,857] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:15:06,865] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:15:06,928] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:15:06,928] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:15:06,929] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:15:06,939] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:15:06,939] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 207 ms
+[2024-09-30 18:15:06,959] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:15:06,960] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:15:06,963] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:15:06,964] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-14 - Starting...
+[2024-09-30 18:15:06,977] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63bb9686
+[2024-09-30 18:15:06,977] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-14 - Start completed.
+[2024-09-30 18:15:06,978] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:15:06,978] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:15:07,022] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:15:07,089] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:15:07,157] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:15:07,183] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:15:07,193] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:15:07,258] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:15:07,282] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:15:07,292] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:15:07,295] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.58 seconds (process running for 7623.543)
+[2024-09-30 18:15:07,295] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:15:16,686] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:15:16,687] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:15:16,689] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 2 ms
+[2024-09-30 18:15:16,727] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-2] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:19:05,093] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-14 housekeeper] [797] [WARN ] HikariPool-14 - Thread starvation or clock leap detected (housekeeper delta=2m27s973ms43µs300ns).
+[2024-09-30 18:20:52,108] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-6] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:22:31,831] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-3] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:34:02,096] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:34:02,158] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-55] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:34:02,169] [com.zaxxer.hikari.HikariDataSource] [Thread-55] [349] [INFO ] HikariPool-14 - Shutdown initiated...
+[2024-09-30 18:34:02,201] [com.zaxxer.hikari.HikariDataSource] [Thread-55] [351] [INFO ] HikariPool-14 - Shutdown completed.
+[2024-09-30 18:34:02,564] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:34:02,565] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:34:02,565] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:34:02,742] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:34:02,754] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:34:02,837] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:34:02,839] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:34:02,839] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:34:02,853] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:34:02,853] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 284 ms
+[2024-09-30 18:34:02,878] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:34:02,881] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:34:02,887] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:34:02,888] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-15 - Starting...
+[2024-09-30 18:34:02,934] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@232836ae
+[2024-09-30 18:34:02,934] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-15 - Start completed.
+[2024-09-30 18:34:02,936] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:34:02,936] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:34:03,034] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:34:03,142] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:34:03,198] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:34:03,228] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:34:03,240] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:34:03,338] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:34:03,380] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:34:03,393] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:34:03,397] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.875 seconds (process running for 8759.645)
+[2024-09-30 18:34:03,398] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:34:28,304] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:34:28,310] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-59] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:34:28,311] [com.zaxxer.hikari.HikariDataSource] [Thread-59] [349] [INFO ] HikariPool-15 - Shutdown initiated...
+[2024-09-30 18:34:28,315] [com.zaxxer.hikari.HikariDataSource] [Thread-59] [351] [INFO ] HikariPool-15 - Shutdown completed.
+[2024-09-30 18:34:28,400] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:34:28,400] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:34:28,400] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:34:28,520] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:34:28,528] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:34:28,587] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:34:28,587] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:34:28,588] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:34:28,597] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:34:28,598] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 197 ms
+[2024-09-30 18:34:28,618] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:34:28,619] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:34:28,623] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:34:28,624] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-16 - Starting...
+[2024-09-30 18:34:28,637] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@775edd5
+[2024-09-30 18:34:28,638] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-16 - Start completed.
+[2024-09-30 18:34:28,638] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:34:28,638] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:34:28,728] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:34:28,764] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:34:28,809] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:34:28,836] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:34:28,849] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:34:28,929] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:34:28,955] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:34:28,966] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:34:28,969] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.582 seconds (process running for 8785.217)
+[2024-09-30 18:34:28,970] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:34:46,631] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:34:46,632] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:34:46,633] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 1 ms
+[2024-09-30 18:34:46,689] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-1] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:36:38,180] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [File Watcher] [211] [INFO ] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-09-30 18:36:38,189] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-63] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:36:38,189] [com.zaxxer.hikari.HikariDataSource] [Thread-63] [349] [INFO ] HikariPool-16 - Shutdown initiated...
+[2024-09-30 18:36:38,196] [com.zaxxer.hikari.HikariDataSource] [Thread-63] [351] [INFO ] HikariPool-16 - Shutdown completed.
+[2024-09-30 18:36:38,287] [org.springframework.boot.StartupInfoLogger] [restartedMain] [50] [INFO ] Starting DmsApiApplication using Java 21.0.3 with PID 15456 (D:\springboot\dms-api\target\classes started by User in D:\springboot\dms-api)
+[2024-09-30 18:36:38,287] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [DEBUG] Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-30 18:36:38,287] [org.springframework.boot.SpringApplication] [restartedMain] [654] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2024-09-30 18:36:38,416] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [143] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-30 18:36:38,425] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [211] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+[2024-09-30 18:36:38,483] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [111] [INFO ] Tomcat initialized with port 8080 (http)
+[2024-09-30 18:36:38,483] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2024-09-30 18:36:38,483] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-30 18:36:38,493] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2024-09-30 18:36:38,493] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [296] [INFO ] Root WebApplicationContext: initialization completed in 204 ms
+[2024-09-30 18:36:38,512] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-09-30 18:36:38,514] [org.hibernate.cache.internal.RegionFactoryInitiator] [restartedMain] [50] [INFO ] HHH000026: Second-level cache disabled
+[2024-09-30 18:36:38,517] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [restartedMain] [87] [INFO ] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-30 18:36:38,517] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [109] [INFO ] HikariPool-17 - Starting...
+[2024-09-30 18:36:38,532] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [554] [INFO ] HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cfd8b82
+[2024-09-30 18:36:38,532] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [122] [INFO ] HikariPool-17 - Start completed.
+[2024-09-30 18:36:38,532] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [153] [WARN ] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-30 18:36:38,533] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [101] [WARN ] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[2024-09-30 18:36:38,585] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [59] [INFO ] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-30 18:36:38,645] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:36:38,695] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-09-30 18:36:38,720] [org.springframework.web.filter.GenericFilterBean] [restartedMain] [240] [DEBUG] Filter 'jwtFilter' configured for use
+[2024-09-30 18:36:38,729] [org.springframework.security.config.annotation.authentication.configuration.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] [restartedMain] [83] [INFO ] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2024-09-30 18:36:38,799] [org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] [restartedMain] [101] [WARN ] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2024-09-30 18:36:38,823] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2024-09-30 18:36:38,832] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [243] [INFO ] Tomcat started on port 8080 (http) with context path '/'
+[2024-09-30 18:36:38,835] [org.springframework.boot.StartupInfoLogger] [restartedMain] [56] [INFO ] Started DmsApiApplication in 0.566 seconds (process running for 8915.084)
+[2024-09-30 18:36:38,837] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [restartedMain] [63] [INFO ] Condition evaluation unchanged
+[2024-09-30 18:36:47,884] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-30 18:36:47,884] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2024-09-30 18:36:47,886] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 1 ms
+[2024-09-30 18:36:47,925] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-2] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:38:15,843] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-3] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:38:38,682] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-5] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:38:57,639] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8080-exec-9] [247] [WARN ] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'files' is not present.]
+[2024-09-30 18:58:59,769] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-17 housekeeper] [797] [WARN ] HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=13m51s8ms835µs200ns).
+[2024-09-30 18:59:08,052] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(160)-127.0.0.1] [159] [INFO ] Application shutdown requested.
+[2024-09-30 18:59:08,083] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [RMI TCP Connection(160)-127.0.0.1] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-09-30 18:59:08,109] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(160)-127.0.0.1] [349] [INFO ] HikariPool-17 - Shutdown initiated...
+[2024-09-30 18:59:08,143] [com.zaxxer.hikari.HikariDataSource] [RMI TCP Connection(160)-127.0.0.1] [351] [INFO ] HikariPool-17 - Shutdown completed.

@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 public class DocumentRequestDto {
 	
 	@NotNull(message="No file is selected")
-    private MultipartFile file;
+    private MultipartFile[] files;
 	
-	@NotNull(message="Atleast one tag must be given")
-    private String tags;
+//	@NotNull(message="Atleast one tag must be given")
+//    private String tags;
 //    private int user_id;
 //    private String tag_name;
 }
