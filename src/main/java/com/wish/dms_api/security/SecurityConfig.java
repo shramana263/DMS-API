@@ -40,7 +40,7 @@ public class SecurityConfig {
             "/configuration/security", "/swagger-ui/**", "/webjars/**",
             "/webjars/swagger-ui/**",
             "/swagger-ui.html",
-            "/api/auth/**",
+            "/api/auth/login",
             "/api/test/**",
             "/documents/**",
             };
@@ -60,6 +60,7 @@ public class SecurityConfig {
 		.csrf(AbstractHttpConfigurer::disable)
 		//single call session, each session will contain an IOC container at each call and delete after working after giving response
 		.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+		
 		
         ;
 		return httpSecurity.build();
